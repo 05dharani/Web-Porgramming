@@ -1,0 +1,6 @@
+heading h1 to h6
+image 
+hyperlink 2 image and text as hyperlink
+ol and ul all type des type
+para tag
+css styling for above inline embedded external css
