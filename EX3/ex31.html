@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Form Input with Navigation</title>
+    <style>
+        .input-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;                  
+        }
+        .input-box {
+            width: 10px;
+            height: 20px;
+            font-size: 10px;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        .input-box:focus {
+            border-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="pin">Enter PIN:</label>
+        <div class="input-container">
+            <input type="text" id="pin1" class="input-box" maxlength="1" oninput="moveFocus(this, 'pin2')" onkeydown="handleKeydown(event, 'pin1', 'pin2')">
+            <input type="text" id="pin2" class="input-box" maxlength="1" oninput="moveFocus(this, 'pin3')" onkeydown="handleKeydown(event, 'pin2', 'pin3')">
+            <input type="text" id="pin3" class="input-box" maxlength="1" oninput="moveFocus(this, 'pin4')" onkeydown="handleKeydown(event, 'pin3', 'pin4')">
+            <input type="text" id="pin4" class="input-box" maxlength="1" onkeydown="handleKeydown(event, 'pin4')">
+        </div>
+    </form>
+
+
+</body>
+</html>
